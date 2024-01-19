@@ -2,6 +2,7 @@ import {View, Text, ScrollView, StyleSheet, SafeAreaView} from 'react-native';
 import React from 'react';
 import ImgCard from '../Components/ImgCard';
 import urls from '../config/urls';
+import SmallCard from '../Components/SmallCard';
 
 const Cards = () => {
   return (
@@ -9,28 +10,18 @@ const Cards = () => {
       <ScrollView>
         <View style={styles.container}>
           <View>
-            <Text style={styles.heading}>FlatCards</Text>
+            <Text style={styles.heading}>See Properties</Text>
           </View>
           <ScrollView horizontal={true} style={styles.cardsContainer}>
-            <View style={[styles.card, styles.redCard]}>
-              <Text style={{color: '#ffffff'}}>RED</Text>
-            </View>
-            <View style={[styles.card, styles.greenCard]}>
-              <Text style={{color: '#ffffff'}}>GREEN</Text>
-            </View>
-            <View style={[styles.card, styles.blueCard]}>
-              <Text style={{color: '#ffffff'}}>BLUE</Text>
-            </View>
-            <View style={[styles.card, styles.redCard]}>
-              <Text style={{color: '#ffffff'}}>RED</Text>
-            </View>
-            <View style={[styles.card, styles.greenCard]}>
-              <Text style={{color: '#ffffff'}}>GREEN</Text>
-            </View>
-            <View style={[styles.card, styles.blueCard]}>
-              <Text style={{color: '#ffffff'}}>BLUE</Text>
-            </View>
+            <SmallCard img={urls?.smallCardUrls?.a} />
+            <SmallCard img={urls?.smallCardUrls?.b} />
+            <SmallCard img={urls?.smallCardUrls?.c} />
+            <SmallCard img={urls?.smallCardUrls?.d} />
+            <SmallCard img={urls?.smallCardUrls?.e} />
+            <SmallCard img={urls?.smallCardUrls?.f} />
           </ScrollView>
+
+          <Text style={styles.heading}>Browse Homes</Text>
 
           <ImgCard
             imgAddress={urls?.imgCardUrls?.firstCard}
@@ -40,6 +31,7 @@ const Cards = () => {
               'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloreasperiores maxime nobis perspiciatis cumque, necessitatibus rationeunde, rem vel deserunt aut deleniti et expedita quos quae, adarchitecto sunt corrupti'
             }
           />
+          
           <ImgCard
             imgAddress={urls?.imgCardUrls?.secondCard}
             addressFirst={'3 BHK, Chandigarh'}
@@ -71,30 +63,10 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     fontWeight: 'bold',
     fontSize: 20,
+    color:'#000'
   },
   cardsContainer: {
-    // padding: 5,
-    marginBottom: 10,
-  },
-  card: {
-    width: 100,
-    height: 100,
-    borderTopLeftRadius: 10,
-    borderBottomRightRadius: 10,
-    elevation: 5,
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 10,
-  },
-  redCard: {
-    backgroundColor: '#be123c',
-  },
-  greenCard: {
-    backgroundColor: '#059669',
-  },
-  blueCard: {
-    backgroundColor: '#60a5fa',
+    marginBottom: 20,
   },
 });
 

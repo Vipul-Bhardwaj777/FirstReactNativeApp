@@ -18,7 +18,6 @@ const ImgCard = ({imgAddress, addressFirst, addressSecond, description}) => {
   };
   return (
     <View>
-      <Text style={styles.heading}>Image Card</Text>
       <View style={styles.imgCardContainer}>
         <Image
           source={{
@@ -54,10 +53,6 @@ const ImgCard = ({imgAddress, addressFirst, addressSecond, description}) => {
 };
 
 const styles = StyleSheet.create({
-  heading: {
-    fontWeight: 'bold',
-    fontSize: 20,
-  },
   imgCardContainer: {
     margin: 10,
     marginLeft: 0,
@@ -66,7 +61,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 20,
     borderBottomRightRadius: 20,
     gap: 5,
-    elevation:5,
+    elevation: 5,
   },
   cardImg: {
     width: '100%',
