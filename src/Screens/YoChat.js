@@ -5,12 +5,11 @@ import Main from '../Components/Main';
 
 const YoChat = () => {
   return (
-    <SafeAreaView>
+    <>
       <Header />
-      <View>
-        <Main />
-      </View>
-    </SafeAreaView>
+
+      <Main />
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import React from 'react';
+import colors from '../constants/colors';
 
 const Header = () => {
   return (
@@ -24,13 +25,14 @@ const Header = () => {
 const styles = StyleSheet.create({
   headMain: {
     height: 125,
-    backgroundColor: '#818cf8',
-    marginBottom:20,
+    backgroundColor: `${colors?.THEME_COLOR}`,
+    marginBottom: 20,
   },
   firstDiv: {
     marginTop: 30,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
     paddingHorizontal: 20,
     marginBottom: 20,
   },
