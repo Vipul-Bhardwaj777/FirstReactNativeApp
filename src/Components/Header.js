@@ -14,7 +14,7 @@ const Header = () => {
       </View>
 
       <View style={styles.secondDiv}>
-        <Text style={styles.secondLinks}>All Chat</Text>
+        <Text style={[styles.secondLinks, {fontWeight: '500'}]}>All Chat</Text>
         <Text style={styles.secondLinks}>Groups</Text>
         <Text style={styles.secondLinks}>Calls</Text>
       </View>
